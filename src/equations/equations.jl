@@ -120,3 +120,7 @@ abstract type AbstractLatticeBoltzmannEquations{NDIMS, NVARS} <: AbstractEquatio
 include("lattice_boltzmann_2d.jl")
 include("lattice_boltzmann_3d.jl")
 
+# Advection-Diffusion equation: first order hyperbolic system
+abstract type AbstractHyperbolicAdvectionDiffusionEquations{NDIMS, NVARS} <: AbstractEquations{NDIMS, NVARS} end
+include("hyperbolic_advection_diffusion_1d.jl")
+
