@@ -78,7 +78,8 @@ export CompressibleEulerEquations1D, CompressibleEulerEquations2D, CompressibleE
        IdealGlmMhdEquations1D, IdealGlmMhdEquations2D, IdealGlmMhdEquations3D,
        HyperbolicDiffusionEquations1D, HyperbolicDiffusionEquations2D, HyperbolicDiffusionEquations3D,
        LinearScalarAdvectionEquation1D, LinearScalarAdvectionEquation2D, LinearScalarAdvectionEquation3D,
-       LatticeBoltzmannEquations2D, LatticeBoltzmannEquations3D
+       LatticeBoltzmannEquations2D, LatticeBoltzmannEquations3D,
+       HyperbolicAdvectionDiffusionEquations1D
 
 export flux_central, flux_lax_friedrichs, flux_hll, flux_hllc, flux_godunov,
        flux_chandrashekar, flux_ranocha, flux_derigs_etal, flux_kennedy_gruber, flux_shima_etal
@@ -113,6 +114,9 @@ export initial_condition_sedov_self_gravity, boundary_condition_sedov_self_gravi
 export initial_condition_eoc_test_coupled_euler_gravity, source_terms_eoc_test_coupled_euler_gravity, source_terms_eoc_test_euler
 export initial_condition_lid_driven_cavity, boundary_condition_lid_driven_cavity
 export initial_condition_couette_steady, initial_condition_couette_unsteady, boundary_condition_couette
+
+export initial_condition_mytest_nonperiodic, boundary_condition_mytest_nonperiodic, source_terms_mytest
+export initial_condition_myexp_nonperiodic, boundary_condition_myexp_nonperiodic, source_terms_myexp
 
 export cons2cons, cons2prim, cons2macroscopic, prim2cons
 export density, pressure, density_pressure, velocity
