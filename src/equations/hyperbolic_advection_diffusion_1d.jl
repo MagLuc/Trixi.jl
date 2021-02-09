@@ -26,8 +26,8 @@ end
 
 
 get_name(::HyperbolicAdvectionDiffusionEquations1D) = "HyperbolicAdvectionDiffusionEquations1D"
-varnames(::typeof(cons2cons), ::HyperbolicAdvectionDiffusionEquations1D) = @SVector ["scalar", "q1"]
-varnames(::typeof(cons2prim), ::HyperbolicAdvectionDiffusionEquations1D) = @SVector ["scalar", "q1"]
+varnames(::typeof(cons2cons), ::HyperbolicAdvectionDiffusionEquations1D) = ("scalar", "q1")
+varnames(::typeof(cons2prim), ::HyperbolicAdvectionDiffusionEquations1D) = ("scalar", "q1")
 default_analysis_errors(::HyperbolicAdvectionDiffusionEquations1D) = (:l2_error, :linf_error, :residual)
 
 @inline function residual_steady_state(du, ::HyperbolicAdvectionDiffusionEquations1D)
