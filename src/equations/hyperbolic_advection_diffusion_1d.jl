@@ -44,7 +44,7 @@ function initial_condition_mytest_nonperiodic(x, t, equations::HyperbolicAdvecti
   c = 1.0
   v = c * x[1] + 0.5 * c * x[1]^2 - c * t * x[1] + 0.5 * c * t^2
   q1 = c + c*x[1] - c*t
-  return @SVector(v, q1)
+  return SVector(v, q1)
 end
 
 function boundary_condition_mytest_nonperiodic(u_inner, orientation, direction, x, t,
@@ -68,7 +68,7 @@ end
 
   du2 = -inv_Tr * u[2]
 
-  return @SVector(0, du2)
+  return SVector(0, du2)
 end
 
 """
@@ -80,7 +80,7 @@ function initial_condition_myexp_nonperiodic(x, t, equations::HyperbolicAdvectio
   c = 2.0
   v = exp(c*x[1] + (c^2-c)*t)
   q1 = c * v
-  return @SVector(v, q1)
+  return SVector(v, q1)
 end
 
 function boundary_condition_myexp_nonperiodic(u_inner, orientation, direction, x, t,
@@ -104,7 +104,7 @@ end
 
   du2 = -inv_Tr * u[2]
 
-  return @SVector(0, du2)
+  return SVector(0, du2)
 end
 
 
